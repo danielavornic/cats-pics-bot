@@ -1,2 +1,2 @@
 # weather-bot
-A twitter bot that tweets the daily wetaher forecast for Chișinău, Moldova.
+A twitter bot that tweets the daily weather forecast for Chișinău, Moldova.
