@@ -27,6 +27,5 @@ def tweet():
         tweet()
 
 if __name__ == "__main__":
-    sleep(60)
     while True:
         tweet()
