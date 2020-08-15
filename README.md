@@ -1,2 +1,2 @@
-# weather-bot
-A twitter bot that tweets the daily weather forecast for Chișinău, Moldova.
+# cats bot
+A twitter bot that tweets pictures of cats every hour.
