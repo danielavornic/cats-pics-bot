@@ -22,10 +22,12 @@ def tweet():
                 image.write(chunk)
         api.update_with_media(filename)
         os.remove(filename)
-        sleep(3600)
+        sleep(1)
     else:
         tweet()
 
 if __name__ == "__main__":
+    sleep(60)
     while True:
         tweet()
+        sleep(3600)
