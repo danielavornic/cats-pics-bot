@@ -16,16 +16,16 @@ def tweet():
     r = requests.get('https://api.thecatapi.com/v1/images/search')
     url = r.json()[0]['url']
     request = requests.get(url, stream=True)
-    while True:
-        if request.status_code == 200:
-            with open(filename, 'wb') as image:
-                for chunk in request:
-                    image.write(chunk)
-            api.update_with_media(filename)
-            os.remove(filename)
-        else:
-            tweet()
+    if request.status_code == 200:
+        with open(filename, 'wb') as image:
+            for chunk in request:
+                image.write(chunk)
+        api.update_with_media(filename)
+        os.remove(filename)
         sleep(3600)
+    else:
+        tweet()
 
 if __name__ == "__main__":
-    tweet()
+    while True:
+        tweet()
