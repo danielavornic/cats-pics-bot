@@ -1,4 +1,7 @@
-import tweepy, requests, os
+import tweepy
+import requests
+import os
+from time import sleep
 
 consumer_key = 'lnYxJ2kGKKWQnKUyn4omuNCLj' 
 consumer_secret = 'fRDKspUvcUQEklWhCXeZJi2Et58FwDhtOV71fTNIr5Pc1XtIy0' 
@@ -21,5 +24,8 @@ def tweet():
         os.remove(filename)
     else:
         tweet()
+    sleep(3600)
 
-tweet()
+if __name__ == "__main__":
+    while True:
+        tweet()
